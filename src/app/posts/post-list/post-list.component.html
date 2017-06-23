@@ -1,6 +1,11 @@
 <ul>
   <li *ngFor="let post of posts">
+    <div *ngIf="post.acf">
+      <img  *ngIf="post.acf.feature_image" [src]="post.acf.feature_image.url" class="md-avatar" alt="Post Image" />
+    </div>
     {{post.title.rendered}}
+    {{post.excerpt.rendered}}
+    <button md-raised-button (click)="singlePost(post.id)">Raised button</button>
   </li>
 
   <pre><code>{{posts | json}}</code></pre>

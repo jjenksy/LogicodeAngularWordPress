@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PostsService} from '../posts.service';
-import {Post} from "../post";
+import {Post} from '../post';
 
 @Component({
   selector: 'app-post-list',
@@ -24,6 +24,10 @@ export class PostListComponent implements OnInit {
   }
   ngOnInit() {
     this.getPosts();
+  }
+
+  singlePost(id: number) {
+    console.log(id);
   }
 
 }

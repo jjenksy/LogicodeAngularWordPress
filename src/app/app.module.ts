@@ -10,14 +10,16 @@ import 'rxjs/Rx';
 import { NavComponent } from './nav/nav.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import {MdSidenavModule, MdToolbarModule} from '@angular/material';
+import {MdButtonModule, MdSidenavModule, MdToolbarModule} from '@angular/material';
+import { SinglePostComponent } from './posts/single-post/single-post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
-    NavComponent
+    NavComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import {MdSidenavModule, MdToolbarModule} from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MdToolbarModule,
-    MdSidenavModule
+    MdSidenavModule,
+    MdButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
