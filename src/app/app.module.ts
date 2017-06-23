@@ -7,17 +7,26 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import 'rxjs/Rx';
+import { NavComponent } from './nav/nav.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import 'hammerjs';
+import {MdSidenavModule, MdToolbarModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent
+    PostListComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MdToolbarModule,
+    MdSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
