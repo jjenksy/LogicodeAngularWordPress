@@ -10,8 +10,9 @@ import 'rxjs/Rx';
 import { NavComponent } from './nav/nav.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import {MdButtonModule, MdSidenavModule, MdToolbarModule} from '@angular/material';
+import {MdButtonModule, MdCardModule, MdGridListModule, MdSidenavModule, MdToolbarModule} from '@angular/material';
 import { SinglePostComponent } from './posts/single-post/single-post.component';
+import {EscapeHtml} from './filters/escape-html';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SinglePostComponent } from './posts/single-post/single-post.component';
     AppComponent,
     PostListComponent,
     NavComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    EscapeHtml
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,9 @@ import { SinglePostComponent } from './posts/single-post/single-post.component';
     BrowserAnimationsModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdButtonModule
+    MdButtonModule,
+    MdGridListModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

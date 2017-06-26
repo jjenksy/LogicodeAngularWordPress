@@ -1,12 +1,29 @@
-<ul>
-  <li *ngFor="let post of posts">
-    <div *ngIf="post.acf">
-      <img  *ngIf="post.acf.feature_image" [src]="post.acf.feature_image.url" class="md-avatar" alt="Post Image" />
-    </div>
-    {{post.title.rendered}}
-    {{post.excerpt.rendered}}
-    <button md-raised-button (click)="singlePost(post.id)">Raised button</button>
-  </li>
 
-  <pre><code>{{posts | json}}</code></pre>
-</ul>
+
+
+
+<md-grid-list cols="2" rowHeight="2:1">
+  <md-grid-tile *ngFor="let post of posts">
+
+    <md-card class="example-card">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title [innerHTML]="post.title.rendered | keepHtml">Shiba Inu</md-card-title>
+        <!--<md-card-subtitle>Dog Breed</md-card-subtitle>-->
+      </md-card-header>
+      <div *ngIf="post.acf">
+        <img  *ngIf="post.acf.feature_image" [src]="post.acf.feature_image.url" class="md-avatar" alt="Post Image" />
+      </div>
+      <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
+      <md-card-content>
+        <p [innerHTML]="post.excerpt.rendered | keepHtml">
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-raised-button (click)="singlePost(post.id)">Read More</button>
+      </md-card-actions>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
+
+<pre><code>{{posts | json}}</code></pre>

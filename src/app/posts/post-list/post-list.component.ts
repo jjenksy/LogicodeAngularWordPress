@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {PostsService} from '../posts.service';
 import {Post} from '../post';
 
@@ -10,7 +10,9 @@ import {Post} from '../post';
 })
 export class PostListComponent implements OnInit {
 
-  posts: Post[]; // declare a variable for an array of posts
+  private _posts: Post[]; // declare a variable for an array of posts
+  @ViewChild('innerHTMLTitle')
+  private innerHTMLTitle: ElementRef;
   // constructor that injects our PostService
   constructor( private postsService: PostsService) { }
 
@@ -19,7 +21,7 @@ export class PostListComponent implements OnInit {
     this.postsService
       .getPosts()
       .subscribe(res => {
-        this.posts = res;
+        this._posts = res;
       });
   }
   ngOnInit() {
@@ -30,4 +32,12 @@ export class PostListComponent implements OnInit {
     console.log(id);
   }
 
+
+  get posts(): Post[] {
+    return this._posts;
+  }
+
+  set posts(value: Post[]) {
+    this._posts = value;
+  }
 }
