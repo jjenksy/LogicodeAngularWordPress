@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {PostsService} from '../posts.service';
 import {Post} from '../post';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-post-list',
@@ -14,7 +15,9 @@ export class PostListComponent implements OnInit {
   @ViewChild('innerHTMLTitle')
   private innerHTMLTitle: ElementRef;
   // constructor that injects our PostService
-  constructor( private postsService: PostsService) { }
+  constructor( private postsService: PostsService,
+               private router: Router,
+               private route: ActivatedRoute) { }
 
 
   getPosts() {
@@ -29,7 +32,7 @@ export class PostListComponent implements OnInit {
   }
 
   singlePost(id: number) {
-    console.log(id);
+      this.router.navigate(['/post', id]);
   }
 
 

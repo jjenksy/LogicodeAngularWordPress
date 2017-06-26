@@ -22,4 +22,11 @@ export class PostsService {
       .map((res: Response) => res.json());
   }
 
+
+  getPost(id: number): Observable<Post>{
+    return this.http
+      .get(this.postsUrl + 'posts/' + id)
+      .map((res: Response) => res.json());
+  }
+
 }
