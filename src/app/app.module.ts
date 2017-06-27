@@ -13,6 +13,7 @@ import 'hammerjs';
 import {MdButtonModule, MdCardModule, MdGridListModule, MdSidenavModule, MdToolbarModule} from '@angular/material';
 import { SinglePostComponent } from './posts/single-post/single-post.component';
 import {EscapeHtml} from './filters/escape-html';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {EscapeHtml} from './filters/escape-html';
     MdSidenavModule,
     MdButtonModule,
     MdGridListModule,
-    MdCardModule
+    MdCardModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

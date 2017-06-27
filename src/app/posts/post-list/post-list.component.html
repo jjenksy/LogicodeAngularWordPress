@@ -2,8 +2,14 @@
 
 
 
-<md-grid-list cols="2" rowHeight="2:1">
-  <md-grid-tile *ngFor="let post of posts">
+<md-grid-list cols="2" rowHeight="2:1"
+              class="container"
+              fxLayout
+              fxLayout.xs="column"
+              fxLayoutAlign="center"
+              fxLayoutGap="10px"
+              fxLayoutGap.xs="0">
+  <md-grid-tile *ngFor="let post of posts" fxFlex="50%">
 
     <md-card class="example-card">
       <md-card-header>
