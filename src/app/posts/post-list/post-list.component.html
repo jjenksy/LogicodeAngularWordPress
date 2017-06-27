@@ -2,26 +2,32 @@
 
 
 
-<md-grid-list cols="2" rowHeight="2:1"
-              class="container"
-              fxLayout
+<div          fxLayout="row"
               fxLayout.xs="column"
-              fxLayoutAlign="center"
-              fxLayoutGap="10px"
-              fxLayoutGap.xs="0">
-  <md-grid-tile *ngFor="let post of posts" fxFlex="50%">
+              fxLayout.sm="column"
+              fxFlex
+              fxLayoutWrap="wrap">
+  <div *ngFor="let post of posts" fxFlex.md="100" fxFlex.lg="50" fxFlex.xl="33" class="container">
 
-    <md-card class="example-card">
+    <md-card >
       <md-card-header>
-        <div md-card-avatar class="example-header-image"></div>
-        <md-card-title [innerHTML]="post.title.rendered | keepHtml">Shiba Inu</md-card-title>
+        <div *ngIf="post.acf">
+          <div *ngIf="post.acf.feature_image">
+            <img [src]="post.acf.feature_image" md-card-avatar>
+          </div>
+        </div>
+
+        <md-card-title [innerHTML]="post.title.rendered | keepHtml"></md-card-title>
         <!--<md-card-subtitle>Dog Breed</md-card-subtitle>-->
       </md-card-header>
       <div *ngIf="post.acf">
-        <img  *ngIf="post.acf.feature_image" [src]="post.acf.feature_image.url" class="md-avatar" alt="Post Image" />
+        <div *ngIf="post.acf.youtube_imbed">
+          <div [innerHTML]="post.acf.youtube_imbed | keepHtml"></div>
+        </div>
       </div>
       <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
       <md-card-content>
+
         <p [innerHTML]="post.excerpt.rendered | keepHtml">
         </p>
       </md-card-content>
@@ -29,6 +35,5 @@
         <button md-raised-button (click)="singlePost(post.id)">Read More</button>
       </md-card-actions>
     </md-card>
-  </md-grid-tile>
-</md-grid-list>
-
+  </div>
+</div>

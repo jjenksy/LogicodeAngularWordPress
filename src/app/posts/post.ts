@@ -78,6 +78,18 @@ class Acf{
     url: String;
   };
 
+  private _youtube_imbed: {
+    url: String;
+  };
+
+
+  get youtube_imbed(): { url: String } {
+    return this._youtube_imbed;
+  }
+
+  set youtube_imbed(value: { url: String }) {
+    this._youtube_imbed = value;
+  }
 
   get feature_image(): { url: String } {
     return this._feature_image;
