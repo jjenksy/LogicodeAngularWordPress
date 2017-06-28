@@ -8,7 +8,8 @@ describe('SinglePostComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SinglePostComponent ]
+      declarations: [ SinglePostComponent ],
+      providers : []
     })
     .compileComponents();
   }));
@@ -19,7 +20,7 @@ describe('SinglePostComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
-    console.log(component);
+  it('sanity', () => {
+    expect(true).toBeTruthy();
   });
 });
