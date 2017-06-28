@@ -73,7 +73,7 @@ class Excerpt{
  * Acf is a word press plugin
  * we use and it exposes more rest functionality
  */
-class Acf{
+class Acf {
   private _feature_image: {
     url: String;
   };
@@ -87,15 +87,8 @@ class Acf{
     return this._youtube_imbed;
   }
 
-  set youtube_imbed(value: { url: String }) {
-    this._youtube_imbed = value;
-  }
-
   get feature_image(): { url: String } {
     return this._feature_image;
   }
 
-  set feature_image(value: { url: String }) {
-    this._feature_image = value;
-  }
 }

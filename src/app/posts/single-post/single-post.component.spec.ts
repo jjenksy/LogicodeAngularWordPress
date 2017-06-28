@@ -20,6 +20,6 @@ describe('SinglePostComponent', () => {
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    console.log(component);
   });
 });

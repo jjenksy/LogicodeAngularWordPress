@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PostsService} from '../posts.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {Post} from '../post';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-single-post',
