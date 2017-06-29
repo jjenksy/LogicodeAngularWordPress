@@ -1,0 +1,21 @@
+
+
+
+<md-card class="author-card">
+  <md-card-header>
+    <img *ngIf="imageUrl_96" md-card-avatar class="author-header-image"  [src]="imageUrl_96">
+    <md-card-title>{{authorDetails?.name}}</md-card-title>
+    <md-card-subtitle><a href="#">Logi-code.com</a></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="assets/LogicodeSticker.png">
+  <md-card-content>
+    <p>
+      {{authorDetails?.description}}
+    </p>
+  </md-card-content>
+  <!--todo urls to social media-->
+  <!--<md-card-actions>-->
+    <!--<button md-button>LIKE</button>-->
+    <!--<button md-button>SHARE</button>-->
+  <!--</md-card-actions>-->
+</md-card>

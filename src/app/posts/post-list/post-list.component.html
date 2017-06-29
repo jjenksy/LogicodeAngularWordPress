@@ -11,20 +11,13 @@
 
     <md-card >
       <md-card-header>
-        <div *ngIf="post.acf">
-          <div *ngIf="post.acf.feature_image">
-            <img [src]="post.acf.feature_image" md-card-avatar>
-          </div>
-        </div>
-
         <md-card-title [innerHTML]="post.title.rendered | keepHtml"></md-card-title>
         <!--<md-card-subtitle>Dog Breed</md-card-subtitle>-->
       </md-card-header>
-      <div *ngIf="post.acf">
-        <div *ngIf="post.acf.youtube_imbed">
-          <div [innerHTML]="post.acf.youtube_imbed | keepHtml"></div>
-        </div>
-      </div>
+      <img *ngIf="post.acf && post.acf.feature_image" md-card-image [src]="post.acf.feature_image">
+
+      <div *ngIf="post.acf.youtube_imbed && !post.acf.feature_image" md-card-image [innerHTML]="post.acf.youtube_imbed | keepHtml"></div>
+
       <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
       <md-card-content>
 

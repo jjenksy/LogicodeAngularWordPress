@@ -14,6 +14,7 @@ import {MdButtonModule, MdCardModule, MdGridListModule, MdSidenavModule, MdToolb
 import { SinglePostComponent } from './posts/single-post/single-post.component';
 import {EscapeHtml} from './filters/escape-html';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { AuthorDetailsComponent } from './author-details/author-details.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     PostListComponent,
     NavComponent,
     SinglePostComponent,
-    EscapeHtml
+    EscapeHtml,
+    AuthorDetailsComponent
   ],
   imports: [
     BrowserModule,

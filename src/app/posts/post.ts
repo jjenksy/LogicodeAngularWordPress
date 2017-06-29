@@ -8,7 +8,7 @@ export class Post {
   private _title: Title;
   private _excerpt: Excerpt;
   private _acf: Acf;
-
+  private links: Links;
 
   get id(): number {
     return this._id;
@@ -41,10 +41,19 @@ export class Post {
   set excerpt(value: Excerpt) {
     this._excerpt = value;
   }
+
+
+  get _links(): Links {
+    return this.links;
+  }
+
+  set _links(value: Links) {
+    this.links = value;
+  }
 }
 
 class Title{
-  private _rendered : any;
+  private _rendered: any;
 
 
   get rendered(): any {
@@ -74,21 +83,45 @@ class Excerpt{
  * we use and it exposes more rest functionality
  */
 class Acf {
-  private _feature_image: {
-    url: String;
-  };
+  private _feature_image: string;
 
-  private _youtube_imbed: {
-    url: String;
-  };
+  private _youtube_imbed: string;
 
 
-  get youtube_imbed(): { url: String } {
-    return this._youtube_imbed;
-  }
-
-  get feature_image(): { url: String } {
+  get feature_image(): string {
     return this._feature_image;
   }
 
+  get youtube_imbed(): string {
+    return this._youtube_imbed;
+  }
+}
+
+/**
+ * The class to model my links object
+ */
+class Links {
+  private _author: Link[];
+
+
+  get author(): Link[] {
+    return this._author;
+  }
+
+  set author(value: Link[]) {
+    this._author = value;
+  }
+}
+
+class Link {
+  private _href: String;
+
+
+  get href(): String {
+    return this._href;
+  }
+
+  set href(value: String) {
+    this._href = value;
+  }
 }

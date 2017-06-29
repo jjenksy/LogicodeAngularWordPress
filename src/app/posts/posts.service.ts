@@ -3,6 +3,7 @@ import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import {Post} from './post';
 import 'rxjs/add/operator/map';
+import {AuthorDetails} from '../author-details/author-details';
 
 
 @Injectable()
@@ -30,4 +31,9 @@ export class PostsService {
       .map((res: Response) => res.json());
   }
 
+  getAuthor(link: string): Observable<AuthorDetails> {
+    return this.http
+      .get(link)
+      .map((res: Response) => res.json());
+  }
 }

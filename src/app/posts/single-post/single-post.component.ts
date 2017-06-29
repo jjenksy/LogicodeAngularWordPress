@@ -25,8 +25,6 @@ export class SinglePostComponent implements OnInit {
       .switchMap((params: Params) => this.postsService.getPost(+params['id']))
       .subscribe((post: Post) => this._post = post);
 
-    console.log(this._post);
-
   }
 
 

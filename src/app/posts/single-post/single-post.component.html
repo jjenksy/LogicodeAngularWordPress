@@ -1,16 +1,19 @@
 
-<div class="containerX">
-  <div fxLayout="row wrap" class="colored box nopad" >
-    <div fxFlex="none">     [flex="none"]       </div>
-    <div fxFlex>            [flex]              </div>
-    <div fxFlex="nogrow">   [flex="nogrow"]     </div>
-    <div fxFlex="grow">     [flex="grow"]       </div>
+<!--<div class="containerX">-->
+  <!--<div fxLayout="row wrap" class="colored box nopad" >-->
+    <!--<div fxFlex="none">     [flex="none"]       </div>-->
+    <!--<div fxFlex>            [flex]              </div>-->
+    <!--<div fxFlex="nogrow">   [flex="nogrow"]     </div>-->
+    <!--<div fxFlex="grow">     [flex="grow"]       </div>-->
 
-    <div fxFlex="33.33%">   [flex="33.33%"]     </div>
-    <div fxFlex="33.33%">   [flex="33.33%"]     </div>
-    <div fxFlex="33.33%">   [flex="33.33%"]     </div>
+    <!--<div fxFlex="33.33%">   [flex="33.33%"]     </div>-->
+    <!--<div fxFlex="33.33%">   [flex="33.33%"]     </div>-->
+    <!--<div fxFlex="33.33%">   [flex="33.33%"]     </div>-->
 
-  </div>
-</div>
+  <!--</div>-->
+<!--</div>-->
+
 
 <pre><code>{{post | json}}</code></pre>
+
+<app-author-details *ngIf="post" [authorLink]="post?._links.author[0].href"></app-author-details>
