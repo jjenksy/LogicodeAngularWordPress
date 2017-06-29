@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.dark-primary-color    {
+  background: #00796B;
+}
+.default-primary-color { background: #009688; }
+.light-primary-color   { background: #B2DFDB; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #607D8B; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+.card-header-padding-fix {
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-top: -24px !important;
+}
