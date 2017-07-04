@@ -1,3 +1,18 @@
 .buttonActive.active {
   color: #F97924;
 }
+
+.global{
+  overflow: auto;
+}
+
+
+.skew-nav{
+  /*skew the side nav to give it an angle*/
+  transform: skew(3deg) !important;
+  right: -5% !important;
+  background-color: #11111f !important;
+  width: 30% !important;
+  position: fixed !important;
+  padding: 30px 5% 10px 20px;
+}

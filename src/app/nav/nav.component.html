@@ -1,4 +1,17 @@
-<md-toolbar color="primary">
-  <span>Custom Toolbar</span>
-  <button class="buttonActive" md-button [routerLink]="['']">Blog List</button>
-</md-toolbar>
+
+
+
+<md-sidenav-container>
+  <md-sidenav align="end" mode="side" opened="true" class="skew-nav">
+    <div>
+      <h1>Logicode</h1>
+      <img src="../../assets/LogicodeSticker.png" height="360" width="360"/>
+    </div>
+  </md-sidenav>
+  <!--including t
+    uter for nav between the templates-->
+  <router-outlet class="global"></router-outlet>
+</md-sidenav-container>
+
+
+
