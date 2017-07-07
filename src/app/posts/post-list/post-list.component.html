@@ -7,7 +7,7 @@
 
   <div *ngFor="let post of posts" class="container">
 
-    <md-card fxFlex="25">
+    <md-card fxFlex>
       <md-card-header>
         <md-card-title class="font-title" [innerHTML]="post.title.rendered | keepHtml" ></md-card-title>
         <!--<md-card-subtitle>Dog Breed</md-card-subtitle>-->
@@ -24,5 +24,5 @@
     </md-card>
   </div>
 
-  <pre><code>{{posts | json}}</code></pre>
+  <!--<pre><code>{{posts | json}}</code></pre>-->
 </div>

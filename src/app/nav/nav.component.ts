@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  private _navButtons: any[];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  get navButtons(): any[] {
+    return this._navButtons;
+  }
+
+  set navButtons(value: any[]) {
+    this._navButtons = value;
+  }
 }

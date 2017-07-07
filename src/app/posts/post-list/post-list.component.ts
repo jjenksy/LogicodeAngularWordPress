@@ -13,6 +13,7 @@ export class PostListComponent implements OnInit {
 
 
   private _posts: Post[]; // declare a variable for an array of posts
+
   @ViewChild('innerHTMLTitle')
   private innerHTMLTitle: ElementRef;
   // constructor that injects our PostService
@@ -49,4 +50,7 @@ export class PostListComponent implements OnInit {
   set posts(value: Post[]) {
     this._posts = value;
   }
+
+
+
 }
