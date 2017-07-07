@@ -24,3 +24,8 @@ h1{
   position: fixed !important;
   padding: 30px 5% 10px 20px;
 }
+
+/*this overides the material design css and allows for a fixed sidenav*/
+.mat-sidenav-container, .mat-sidenav-content {
+  transform: none !important;
+}
