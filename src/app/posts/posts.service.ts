@@ -9,7 +9,7 @@ import {AuthorDetails} from '../author-details/author-details';
 @Injectable()
 export class PostsService {
 
-  private postsUrl = 'http://www.logi-code.com/wp-json/wp/v2/';
+  private postsUrl = 'https://public-api.wordpress.com/wp/v2/sites/logicodesite.wordpress.com/';
   constructor(private http: Http) { }
 
   /**

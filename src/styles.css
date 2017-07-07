@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light');
+
+/*font-family: 'Indie Flower', cursive;*/
+/*font-family: 'Shadows Into Light', cursive;*/
+
 .dark-primary-color    {
   background: #00796B;
 }

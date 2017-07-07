@@ -15,6 +15,7 @@ import { SinglePostComponent } from './posts/single-post/single-post.component';
 import {EscapeHtml} from './filters/escape-html';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AuthorDetailsComponent } from './author-details/author-details.component';
+import {Angular2FontawesomeModule} from 'angular2-fontawesome';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AuthorDetailsComponent } from './author-details/author-details.componen
     MdButtonModule,
     MdGridListModule,
     MdCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    Angular2FontawesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

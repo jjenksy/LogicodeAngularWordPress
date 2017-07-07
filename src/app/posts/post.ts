@@ -7,8 +7,8 @@ export class Post {
   private _id: number;
   private _title: Title;
   private _excerpt: Excerpt;
-  private _acf: Acf;
   private links: Links;
+  private _featured_media_url: any;
 
   get id(): number {
     return this._id;
@@ -18,12 +18,13 @@ export class Post {
     this._id = value;
   }
 
-  get acf(): Acf {
-    return this._acf;
+
+  get featured_media_url(): any {
+    return this._featured_media_url;
   }
 
-  set acf(value: Acf) {
-    this._acf = value;
+  set featured_media_url(value: any) {
+    this._featured_media_url = value;
   }
 
   get title(): Title {
@@ -75,25 +76,6 @@ class Excerpt{
 
   set rendered(value: any) {
     this._rendered = value;
-  }
-}
-
-/**
- * Acf is a word press plugin
- * we use and it exposes more rest functionality
- */
-class Acf {
-  private _feature_image: string;
-
-  private _youtube_imbed: string;
-
-
-  get feature_image(): string {
-    return this._feature_image;
-  }
-
-  get youtube_imbed(): string {
-    return this._youtube_imbed;
   }
 }
 

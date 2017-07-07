@@ -10,7 +10,10 @@
   color: #ffc86e;
   transform: rotate(3deg) translateY(25%);
   text-align: center;
-  font-family: "Roboto",serif;
+
+}
+h1{
+  font-family: "laffayette_comic_proregular",sans-serif !important;
 }
 .skew-nav{
   /*skew the side nav to give it an angle*/

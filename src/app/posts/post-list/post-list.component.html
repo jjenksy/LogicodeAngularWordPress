@@ -4,26 +4,25 @@
 
 <div          fxLayout="column"
               fxFlex>
-  <div *ngFor="let post of posts" fxFlex class="container">
 
-    <md-card>
+  <div *ngFor="let post of posts" class="container">
+
+    <md-card fxFlex="25">
       <md-card-header>
-        <md-card-title [innerHTML]="post.title.rendered | keepHtml" ></md-card-title>
+        <md-card-title class="font-title" [innerHTML]="post.title.rendered | keepHtml" ></md-card-title>
         <!--<md-card-subtitle>Dog Breed</md-card-subtitle>-->
       </md-card-header>
-      <img *ngIf="post.acf && post.acf.feature_image" md-card-image [src]="post.acf.feature_image">
-
-      <div *ngIf="post.acf.youtube_imbed && !post.acf.feature_image" md-card-image [innerHTML]="post.acf.youtube_imbed | keepHtml"></div>
-
-      <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
+      <img *ngIf="post.featured_media_url" md-card-image [src]="post.featured_media_url">
       <md-card-content >
 
         <p [innerHTML]="post.excerpt.rendered | keepHtml">
         </p>
       </md-card-content>
       <md-card-actions>
-        <button md-raised-button (click)="singlePost(post.id)">Read More</button>
+        <button md-raised-button (click)="singlePost(post.id)">Read On <fa [name]="'rocket'"></fa></button>
       </md-card-actions>
     </md-card>
   </div>
+
+  <pre><code>{{posts | json}}</code></pre>
 </div>
