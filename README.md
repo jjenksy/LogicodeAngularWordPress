@@ -1,6 +1,6 @@
 # LogicodeAngularWordPress
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+This project is an [Angular CLI](https://github.com/angular/angular-cli) application and is a StaticFile application backed by wordpress.com's public API.
 
 ## Development server
 
@@ -23,6 +23,23 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
+## Deployment this assume Cloud Foundry Familiarity
+The chosen deployment of the application was for me through CloudFoundry once the `ng-build' command is ran a you `dist/' directory is created
+create a file called `Staticfile` in that directory.
+Login to your Cloud Foundry 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+cf login
+```
+Navigate to the dist folder and run the command
+```
+cf push <app-name> -m 64M
+```
+
+Replace the `<app-name>` with the name of your application.
+Cloud Foundry will then build the app. using the static build pack and deploy it to an NGINX server.
+## Authors
+
+* **John Jenkins** - (https://github.com/jjenksy)
+
+
